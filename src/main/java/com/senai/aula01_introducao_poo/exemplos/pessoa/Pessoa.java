@@ -13,6 +13,10 @@ public class Pessoa {
         this.endereço = endereço;
     }
 
+    public Pessoa(String name, int idade) {
+        this.name = name;
+        this.idade = idade;
+    }
 
     public void falar(String frase) {
         System.out.println(name+ " falou: " +frase);
