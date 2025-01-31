@@ -44,6 +44,8 @@ public class Main {
         pessoa1.falar("Very good, have a good day!!");
         pessoa2.comer("Bolo de chocolate");
 
+        Pessoa pessoa3 = new Pessoa("Ysa", 13);
+
 
     }
 }
