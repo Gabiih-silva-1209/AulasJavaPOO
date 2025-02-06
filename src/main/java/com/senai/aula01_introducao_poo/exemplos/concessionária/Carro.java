@@ -38,7 +38,8 @@ public class Carro {
             valorComDesvalorizacao -= valorComDesvalorizacao * 0.02;
 
         }
-        System.out.println( "O " +modelo + "no ano" +anoAtual+ " vale R$%f " +valorComDesvalorizacao+ "na Tabela Fipe");
+        System.out.printf( "O %s no ano %d vale R$%,.2f na tabela fipe",
+                modelo, anoAtual, valorComDesvalorizacao);
     }
 
     @Override

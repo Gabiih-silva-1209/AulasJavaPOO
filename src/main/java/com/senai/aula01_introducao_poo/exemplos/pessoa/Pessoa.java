@@ -4,13 +4,13 @@ public class Pessoa {
     String name;
     int idade;
     float altura;
-    Endereco endereço;
+    Endereco endereco;
 
-    public Pessoa(String name, int idade, float altura, Endereco endereço) {
+    public Pessoa(String name, int idade, float altura, Endereco endereco) {
         this.name = name;
         this.idade = idade;
         this.altura = altura;
-        this.endereço = endereço;
+        this.endereco = endereco;
     }
 
     public Pessoa(String name, int idade) {
@@ -29,7 +29,7 @@ public class Pessoa {
 
     @Override
     public String toString() {
-        return "O nome da pessoa é " + this.name + " tem " + this.idade + "anos," + this.altura + " de altura e mora no endereço " + this.endereço;
+        return "O nome da pessoa é " + this.name + " tem " + this.idade + "anos," + this.altura + " de altura e mora no endereço " + this.endereco;
 
     }
 }
