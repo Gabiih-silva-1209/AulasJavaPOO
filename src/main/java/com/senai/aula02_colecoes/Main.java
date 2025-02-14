@@ -1,8 +1,10 @@
 package com.senai.aula02_colecoes;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
-    public class Main {
+public class Main {
         public static void main(String[] args) {
             Pessoa pessoa1 = new Pessoa("Gabi",22);
             Pessoa pessoa2 = new Pessoa("Ysa",14);
@@ -50,6 +52,10 @@ import java.util.ArrayList;
 
             listaPessoas.add(0,pessoa3);
             listar(listaPessoas);
+
+            listaPessoas.forEach(System.out:: println);
+
+            List<Pessoa> listaFiltrada = listaPessoas.stream().filter( p -> p.idade>=10).collect(Collectors.toList());
 
 
         }
