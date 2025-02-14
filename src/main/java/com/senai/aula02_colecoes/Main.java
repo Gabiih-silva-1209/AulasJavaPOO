@@ -2,6 +2,7 @@ package com.senai.aula02_colecoes;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class Main {
@@ -54,6 +55,11 @@ public class Main {
             listar(listaPessoas);
 
             listaPessoas.forEach(System.out:: println);
+
+Scanner scanner = new Scanner(System.in);
+            System.out.println("Preencha as informações a seguir:");
+
+            System.out.println("Nome: " );
 
             List<Pessoa> listaFiltrada = listaPessoas.stream().filter( p -> p.nome.toLowerCase().contains("la")).toList();
             System.out.println("--------teste filtro ---------------");
