@@ -55,7 +55,7 @@ public class Main {
 
             listaPessoas.forEach(System.out:: println);
 
-            List<Pessoa> listaFiltrada = listaPessoas.stream().filter( p -> p.idade>=10).collect(Collectors.toList());
+            List<Pessoa> listaFiltrada = listaPessoas.stream().filter( p -> p.nome.toLowerCase().contains("la")).toList();
             System.out.println("--------teste filtro ---------------");
 
         }
