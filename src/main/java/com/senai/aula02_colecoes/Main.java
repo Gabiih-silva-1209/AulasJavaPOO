@@ -56,7 +56,7 @@ public class Main {
             listaPessoas.forEach(System.out:: println);
 
             List<Pessoa> listaFiltrada = listaPessoas.stream().filter( p -> p.idade>=10).collect(Collectors.toList());
-
+            System.out.println("--------teste filtro ---------------");
 
         }
 
