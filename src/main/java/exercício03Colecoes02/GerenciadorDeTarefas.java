@@ -1,4 +1,4 @@
-package exercício03;
+package exercício03Colecoes02;
 
 import java.util.ArrayList;
 import java.util.Scanner;

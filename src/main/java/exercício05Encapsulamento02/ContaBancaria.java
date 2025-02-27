@@ -1,4 +1,4 @@
-package exercício05;
+package exercício05Encapsulamento02;
 
 public class ContaBancaria {
     private String titular;

@@ -1,4 +1,4 @@
-package exercício04;
+package exercício04Encapsulamento01;
 
 import java.util.ArrayList;
 import java.util.Scanner;

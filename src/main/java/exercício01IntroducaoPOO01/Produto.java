@@ -1,4 +1,4 @@
-package exercício01;
+package exercício01IntroducaoPOO01;
 
 public class Produto {
     String Nome;

@@ -1,8 +1,5 @@
-package exercício06;
+package exercício06Encapsulamento03;
 
-import exercício05.ContaBancaria;
-
-import javax.crypto.spec.PSource;
 import java.util.ArrayList;
 import java.util.Scanner;
 

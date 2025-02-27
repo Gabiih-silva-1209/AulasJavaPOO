@@ -1,4 +1,4 @@
-package exercício06;
+package exercício06Encapsulamento03;
 
 public class Funcionario {
     private String nome;
