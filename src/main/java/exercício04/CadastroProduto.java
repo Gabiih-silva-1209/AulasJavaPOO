@@ -1,71 +1,69 @@
 package exercício04;
 
-import exercício01.Produto;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class CadastroProduto {
     public static void main(String[] args) {
-       ArrayList<Produto>produtos = new ArrayList<>();
-       Scanner scanner = new Scanner(System.in);
-       String menu = """
-               __________________________________
-               |                                 |
-               |  Escolha uma opção:             |
-               |  1- Cadastrar Produto.          |                    
-               |  2- Listar Produtos.            |
-               |  3- Sair                        |
-               |                                 |
-               |_________________________________|               
-       """;
-       int opcao;
-       do {
-           System.out.println(menu);
-           opcao = scanner.nextInt();
-           scanner.nextLine();
+        ArrayList<Produto> produtos = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
 
-           switch (opcao){
-               case 1:
-                   cadastrarProdutos(produtos, scanner);
-                   break;
+        String menu= """
+                _____________________________________________________________________
+                |   Escolha uma Opção:                                              |
+                |       1- Cadastrar produto                                        |
+                |       2- Listar produto                                           |
+                |       3- Sair                                                     |
+                |___________________________________________________________________|
+                """;
+        int opcao;
 
-               case 2:
-                   listarProdutos(produtos);
-                   break;
+        do{
+            System.out.println(menu);
+            opcao = scanner.nextInt();
+            scanner.nextLine();
 
-               case 3:
-                   System.out.println("Sair");
-                   scanner.close();
-               default:
-                   System.out.println("Opção Inválida!!!");
+            switch (opcao){
+                case 1:
+                    cadastrarProduto(produtos, scanner);
+                    break;
 
-           }
-       }while(opcao !=3);
+                case 2:
+                    listarProdutos(produtos);
+                    break;
 
-    }public static void cadastrarProdutos(ArrayList<Produto>produtos, Scanner scanner) {
-        System.out.println("Cadastrar produto.");
+                case 3:
+                    System.out.println("Sair");
+                    break;
 
-        System.out.println("Digite o nome do produto: ");
-        String nome = scanner.nextLine();
-        System.out.println("Digite o preço do produto: ");
-        double preco = scanner.nextDouble();
-        scanner.nextLine();
+                default:
+                    System.out.println("Opção inválida!!!");
+            }
+        }while (opcao!=3);
+    scanner.close();
+    }
+}
+
+public static void cadastrarProduto(ArrayList<Produto> produtos, Scanner scanner){
+    System.out.println("Digite o nome do produto: ");
+    String nome = scanner.nextLine();
+
+    System.out.println("Digite o preço do produto: ");
+    double preco = scanner.nextDouble();
+    scanner.nextLine();
 
         produtos.add(new Produto(nome, preco));
         System.out.println("Produto cadastrado com sucesso!!");
     }
 
-    public static void listarProdutos(ArrayList<Produto>produtos) {
-        System.out.println("Listar produtos");
-if (produtos.isEmpty()){
-    System.out.println("Não há produtos cadastrados.");
-}else {
-    for (Produto produto : produtos){
-        System.out.println("Nome" +produto.getNome() +", Preço: R$" +produto.getPreco);
-    }
-}
-    }
-    }
+        public static void listarProdutos(ArrayList<Produto> produtos){
+           if (produtos.isEmpty()) {
+               System.out.println("Nenhum produto cadastrado.");
+           }else{
+               System.out.println("Lista de produtos:");
+               for (Produto produto : produtos){
+                   System.out.println("Nome: " +produto.getNome() + ", Preço: R$ " +produto.getPreco());
+               }
+           }
 
-
+        }
