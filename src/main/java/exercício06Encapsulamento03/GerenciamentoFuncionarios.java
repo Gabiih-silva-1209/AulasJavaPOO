@@ -86,6 +86,6 @@ public class GerenciamentoFuncionarios {
                 return;
             }
         }
-        System.out.println("Funcionário não encontrado.");
+        System.out.println("Funcionário não encontrado!!");
     }
 }
