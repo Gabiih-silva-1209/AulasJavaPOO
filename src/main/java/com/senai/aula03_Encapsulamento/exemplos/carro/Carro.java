@@ -1,4 +1,4 @@
-package com.senai.aula03_Encapsulamento;
+package com.senai.aula03_Encapsulamento.exemplos.carro;
 //Definição da class Carro
 public class Carro {
     //Atributo privado: só pode ser acessado dentro da própria class

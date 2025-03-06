@@ -1,4 +1,4 @@
-package exercício03Colecoes02;
+package com.senai.aula02_colecoes.exercicios.gerenciamento_de_tarefas;
 
 import java.util.ArrayList;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package exercício01IntroducaoPOO01;
+package com.senai.aula01_introducao_poo.exercicio.cadastro_de_produto;
 
 public class Main {
     public static void main(String[] args) {

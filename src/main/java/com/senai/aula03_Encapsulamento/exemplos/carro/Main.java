@@ -1,4 +1,4 @@
-package com.senai.aula03_Encapsulamento;
+package com.senai.aula03_Encapsulamento.exemplos.carro;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package exercício06Encapsulamento03;
+package com.senai.aula03_Encapsulamento.exercicios.gerenciamento_de_funcionarios;
 
 public class Funcionario {
     private String nome;
