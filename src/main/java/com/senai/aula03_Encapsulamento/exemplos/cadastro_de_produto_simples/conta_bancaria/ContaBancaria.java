@@ -40,4 +40,15 @@ public class ContaBancaria {
                 System.out.println("Saldo insulficiente!!");
             }
     }
+
+    public void transferir(double valor){
+
+    }
+    @Override
+    public String toString() {
+        return "ContaBancaria{" +
+                "titular='" + titular + '\'' +
+                '}';
+    }
 }
+
