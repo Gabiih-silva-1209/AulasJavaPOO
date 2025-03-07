@@ -12,7 +12,11 @@ public class Funcionarios {
     }
 
     public void setNome(String nome) {
-        this.nome = nome;
+        if (nome.isBlank())
+            this.nome = nome;
+    }else{
+                System.out.println("O campo será atribuido como anônimo");
+            }
     }
 
     public double getSalario() {
@@ -42,6 +46,7 @@ public class Funcionarios {
     }
 
     public void setCargo(String cargo) {
+
         this.cargo = cargo;
     }
 
