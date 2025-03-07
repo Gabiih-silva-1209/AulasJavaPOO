@@ -1,4 +1,4 @@
-package com.senai.aula03_Encapsulamento.exemplos.cadastro_de_produto_simples.conta_bancaria;
+package com.senai.aula03_Encapsulamento.exemplos.conta_bancaria;
 
 public class ContaBancaria {
     private String titular;
@@ -34,15 +34,17 @@ public class ContaBancaria {
     }
 
         public void sacar(double valor){
-            if (valor<=saldo){
+            if (valor<=saldo&& valor<0){
                 saldo -=valor;
+                System.out.println("Saque realizado com sucesso na conta do titular " +titular+ "! saldo atual de R$ " +saldo);
             }else{
                 System.out.println("Saldo insulficiente!!");
             }
     }
 
-    public void transferir(double valor){
-
+    public void transferir(double valor, ContaBancaria contaDestino){
+this.sacar(valor);
+contaDestino.depositar(valor);
     }
     @Override
     public String toString() {

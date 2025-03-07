@@ -1,4 +1,4 @@
-package com.senai.aula03_Encapsulamento.exemplos.cadastro_de_produto_simples.conta_bancaria;
+package com.senai.aula03_Encapsulamento.exemplos.conta_bancaria;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,5 +18,8 @@ public class Main {
 
         System.out.println(contaBancaria1);
         System.out.println(contaBancaria2);
+
+        System.out.println("--------Teste transferência-----------");
+        contaBancaria2.transferir(1000,contaBancaria1);
     }
 }
