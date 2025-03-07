@@ -2,13 +2,13 @@ package com.senai.aula03_Encapsulamento.exemplos.conta_bancaria;
 
 public class ContaBancaria {
     private String titular;
-    private  double saldo;
+    private double saldo;
 
     public ContaBancaria(String titular, double saldo) {
         this.titular = titular;
-        if (saldo>=0) {
+        if (saldo >= 0) {
             this.saldo = saldo;
-        }else{
+        } else {
             System.out.println("O saldo inicial não pode ser negativo!!");
             System.out.println("O saldo da conta iniciará com R$0,00");
         }
@@ -25,25 +25,29 @@ public class ContaBancaria {
     public double getSaldo() {
         return saldo;
     }
+
     public void depositar(double valor) {
-    if (valor>0){
-        saldo+=valor;
-    }else {
-        System.out.println("Valor inválido,o valor precisa ser maior que zero!!");
-    }
+        if (valor > 0) {
+            saldo += valor;
+        } else {
+            System.out.println("Valor inválido,o valor precisa ser maior que zero!!");
+        }
     }
 
-        public void sacar(double valor){
+        public boolean sacar(double valor){
             if (valor<=saldo&& valor<0){
                 saldo -=valor;
                 System.out.println("Saque realizado com sucesso na conta do titular " +titular+ "! saldo atual de R$ " +saldo);
+           return true;
             }else{
                 System.out.println("Saldo insulficiente!!");
+
             }
+            return false;
     }
 
     public void transferir(double valor, ContaBancaria contaDestino){
-this.sacar(valor);
+if (this.sacar(valor));
 contaDestino.depositar(valor);
     }
     @Override

@@ -21,5 +21,7 @@ public class Main {
 
         System.out.println("--------Teste transferência-----------");
         contaBancaria2.transferir(1000,contaBancaria1);
+
+        contaBancaria2.transferir(1000, contaBancaria1);
     }
 }
