@@ -1,7 +1,12 @@
 package com.senai.aula04_Heranca.Exercícios.controle_de_estoque;
 
-public class Eletronico extends Produto{
+public class Eletronico extends Produto {
     protected int voltagem;
+
+    public Eletronico(String name, double preco, int quantidade, int voltagem) {
+        super(name, preco, quantidade);
+        this.voltagem = voltagem;
+    }
 
     public int getVoltagem() {
         return voltagem;
@@ -11,10 +16,9 @@ public class Eletronico extends Produto{
         this.voltagem = voltagem;
     }
 
-    public Eletronico(String name, double preco, int quantidade, int voltagem) {
-        super(name, preco, quantidade);
-        this.voltagem = voltagem;
-
-
+    @Override
+    void exibirDetalhes() {
+        super.exibirDetalhes();
     }
 }
+

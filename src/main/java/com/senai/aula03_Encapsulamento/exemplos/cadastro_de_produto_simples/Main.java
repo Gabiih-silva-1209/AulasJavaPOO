@@ -1,6 +1,6 @@
 package com.senai.aula03_Encapsulamento.exemplos.cadastro_de_produto_simples;
 
-import com.senai.aula01_introducao_poo.exercicio.cadastro_de_produto.Produto;
+import com.senai.aula03_Encapsulamento.exemplos.cadastro_de_produto_simples.Produto;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,6 +13,12 @@ public class Main {
 
         produto1.setPreco(10);
         produto2.setPreco(-30);
+
+        //Atualizando os preços dos produtos
+
+        System.out.println("------------ Após atualização ---------------------");
+        System.out.println(produto1);
+        System.out.println(produto2);
 
 
     }

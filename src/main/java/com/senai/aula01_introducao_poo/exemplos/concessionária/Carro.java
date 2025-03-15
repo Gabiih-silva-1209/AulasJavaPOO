@@ -31,15 +31,14 @@ public class Carro {
     }
 
     public void valorTabelaFipe(int anoAtual) {
-        int idadeCarro = anoAtual -this.anoFabricacao;
+        int idadeCarro = anoAtual - this.anoFabricacao;
         double valorComDesvalorizacao = preco;
 
         for (int i = 0; i < idadeCarro; i++) {
             valorComDesvalorizacao -= valorComDesvalorizacao * 0.02;
 
         }
-        System.out.printf( "O %s no ano %d vale R$%,.2f na tabela fipe",
-                modelo, anoAtual, valorComDesvalorizacao);
+        System.out.printf( "O %s no ano %d vale R$%,.2f na tabela fipe \n" +modelo+ +anoAtual+ valorComDesvalorizacao);
     }
 
     @Override

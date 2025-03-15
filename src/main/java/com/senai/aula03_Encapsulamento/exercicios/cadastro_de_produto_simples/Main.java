@@ -1,4 +1,4 @@
-package exercício04Encapsulamento01;
+package com.senai.aula03_Encapsulamento.exercicios.cadastro_de_produto_simples;
 
 public class Main {
     public static void main(String[] args) {

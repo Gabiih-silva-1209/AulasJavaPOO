@@ -5,16 +5,16 @@ import com.senai.aula03_Encapsulamento.exercicios.gerenciamento_de_funcionarios.
 public class Main {
     public static void main(String[] args) {
         System.out.println("----- teste 01 ---------");
-        Funcionarios = funcionario01 = new Funcionario("Gabrieli", 2000, 1);
-        System.out.println(funcionario01);
+       Funcionarios funcionario1 = new Funcionarios("Gabrieli", 2000, 1) ;
+       System.out.println(funcionario1);
 
         System.out.println("------- teste 02 --------");
-        Funcionarios = funcionario02 = new Funcionario("Nathalia", 1000, 4);
-        System.out.println(funcionario02);
+        Funcionarios funcionario2 = new Funcionarios("Nathalia", 1000, 4);
+        System.out.println(funcionario2);
 
         System.out.println("--------- teste 03 --------------");
 
-        funcionario01.aumentarSalario(20);
+        funcionario1.aumentarSalario(20);
 
     }
 }

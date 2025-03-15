@@ -37,7 +37,6 @@ public class Produto {
         this.quantidade = quantidade;
     }
 
-
     @Override
     public String toString() {
         return "Produto{" +
@@ -45,11 +44,12 @@ public class Produto {
                 ", preco=" + preco +
                 ", quantidade=" + quantidade +
                 '}';
+    }
 
-        //Método comum entre alimento e eletrônico
+
+    //Método comum entre alimento e eletrônico
 
         void exibirDetalhes() {
-            System.out.println("O produto é: " +getName()+ "seu preço é: " +getPreco()+ "há " +getQuantidade()+ "no estoque. ");
+            System.out.println("O produto é: " +getName()+ "seu preço é: " +getPreco()+ "há " +getQuantidade()+ "no estoque ");
         }
     }
-}

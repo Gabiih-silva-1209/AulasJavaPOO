@@ -1,4 +1,4 @@
-package exercício04Encapsulamento01;
+package com.senai.aula03_Encapsulamento.exercicios.cadastro_de_produto_simples;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -54,7 +54,7 @@ public class CadastroProduto {
         scanner.nextLine();
 
         produtos.add(new Produto(nome, preco));
-        System.out.println("Produto cadastrado com sucesso!!");
+        System.out.println("Produto.java cadastrado com sucesso!!");
     }
 
     public static void listarProdutos(ArrayList<Produto> produtos) {

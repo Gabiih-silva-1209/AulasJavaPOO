@@ -23,7 +23,7 @@ public class Produto {
 
     @Override
     public String toString() {
-        return "Produto{" +
+        return "Produto.java{" +
                 "nome='" + nome + '\'' +
                 ", preco=" + preco +
                 '}';

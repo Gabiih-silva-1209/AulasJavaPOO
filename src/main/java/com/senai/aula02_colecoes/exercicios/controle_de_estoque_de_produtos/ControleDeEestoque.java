@@ -31,7 +31,7 @@ public class ControleDeEestoque {
                     scanner.nextLine();
                     produtos.add(nome);
                     quantidades.add(quantidade);
-                    System.out.println("Produto cadastrado com sucesso!!!");
+                    System.out.println("Produto.java cadastrado com sucesso!!!");
                     break;
 
                 case 2:
@@ -60,7 +60,7 @@ public class ControleDeEestoque {
                                 break;
                             }
                         }
-                        System.out.println("Produto não encontrado!!!");
+                        System.out.println("Produto.java não encontrado!!!");
                     }
                     break;
                 case 4:
@@ -72,11 +72,11 @@ public class ControleDeEestoque {
                         for (int i = 0; i < produtos.size(); i++) {
                             if (produtos.get(i).equals(nomeBusca)) {
                                 produtos.remove(i);
-                                System.out.println("Produto removido com sucesso!!");
+                                System.out.println("Produto.java removido com sucesso!!");
                                 break;
                             }
                         }
-                        System.out.println("Produto não encontrado!!!");
+                        System.out.println("Produto.java não encontrado!!!");
                     }
                     break;
                 case 5:
@@ -87,11 +87,11 @@ public class ControleDeEestoque {
                         String nomeBusca = scanner.nextLine();
                         for (int i = 0; i < produtos.size(); i++) {
                             if (produtos.get(i).equals(nomeBusca)) {
-                                System.out.println("Produto encontrado: " + produtos.get(i) + "(Quantidade: " + quantidades.get(i) + ")");
+                                System.out.println("Produto.java encontrado: " + produtos.get(i) + "(Quantidade: " + quantidades.get(i) + ")");
                                 break;
                             }
                         }
-                        System.out.println("Produto encontrado!!!");
+                        System.out.println("Produto.java encontrado!!!");
                     }
                     break;
                 case 6:
@@ -102,24 +102,5 @@ public class ControleDeEestoque {
             }
         } while (opcao != 6);
         scanner.close();
-    }
-}
-class Produto{
-    private String nome;
-    private int quantidade;
-
-    public Produto(String nome, int quantidade) {
-        this.nome = nome;
-        this.quantidade = quantidade;
-    }
-    public String getNome (){
-        return nome;
-    }
-    public int getQuantidade(){
-        return quantidade;
-    }
-
-    public void setQuantidade(int quantidade) {
-        this.quantidade = quantidade;
     }
 }
