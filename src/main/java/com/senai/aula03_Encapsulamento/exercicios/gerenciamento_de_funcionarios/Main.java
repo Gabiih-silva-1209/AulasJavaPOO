@@ -3,7 +3,7 @@ package com.senai.aula03_Encapsulamento.exercicios.gerenciamento_de_funcionarios
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class GerenciamentoFuncionarios {
+public class Main {
     public static void main(String[] args) {
         ArrayList<Funcionario> funcionarios = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
@@ -13,7 +13,7 @@ public class GerenciamentoFuncionarios {
                 |       1- Cadastrar Funcionário                                    |
                 |       2- Listar Funcionários                                      |
                 |       3- Aumento Salário                                          |
-                |       5- Sair                                                     |
+                |       4- Sair                                                     |
                 |___________________________________________________________________|
                 """;
         int opcao;
@@ -66,6 +66,8 @@ public class GerenciamentoFuncionarios {
     public static void listarFuncionarios(ArrayList<Funcionario> funcionarios) {
         if (funcionarios.isEmpty()) {
             System.out.println("Nenhum funcionário cadastrado!");
+        }else{
+            System.out.println("Lista de funcionários");
             for (Funcionario funcionario : funcionarios) {
                 System.out.println("Nome: " + funcionario.getNome() + ", Salário: R$ " + funcionario.getSalario() + ", Cargo: " + funcionario.getCargo());
             }

@@ -36,11 +36,12 @@ public class Funcionario {
     }
 
     public String getCargo() {
+
         return cargo;
     }
 
     public void setCargo(String cargo) {
-        if (cargo.equals("Gerente")) {
+        if (cargo.equals("Gerente") ||  cargo.equals("Analista") || cargo.equals("Programador")){
             this.cargo = cargo;
         } else {
             System.out.println("Cargo inválido. O cargo deve Gerente, Analista ou Programador.");

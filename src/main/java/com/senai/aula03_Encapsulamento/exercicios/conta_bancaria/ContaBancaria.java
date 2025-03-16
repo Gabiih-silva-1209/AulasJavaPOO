@@ -1,4 +1,4 @@
-package exercício05Encapsulamento02;
+package com.senai.aula03_Encapsulamento.exercicios.conta_bancaria;
 
 public class ContaBancaria {
     private String titular;

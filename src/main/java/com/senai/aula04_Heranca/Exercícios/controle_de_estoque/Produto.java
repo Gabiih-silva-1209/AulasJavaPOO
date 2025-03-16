@@ -7,6 +7,21 @@ public class Produto {
 
     //Construtor
     public Produto(String name, double preco, int quantidade) {
+        if (preco >= 0) {
+            this.preco = preco;
+        } else {
+            System.out.println("O preço não pode ser negativo!!");
+            System.out.println("O preço do produto será atribuido como R$0,00!!!");
+            this.preco = 0;
+        }
+
+        if (quantidade >= 0) {
+            this.quantidade = quantidade;
+        } else {
+            System.out.println("A quantidade não pode ser negativa!!");
+            this.quantidade = 0;
+        }
+
         this.name = name;
         this.preco = preco;
         this.quantidade = quantidade;
@@ -50,6 +65,6 @@ public class Produto {
     //Método comum entre alimento e eletrônico
 
         void exibirDetalhes() {
-            System.out.println("O produto é: " +getName()+ "seu preço é: " +getPreco()+ "há " +getQuantidade()+ "no estoque ");
+            System.out.println("O produto é: " +getName()+ " seu preço é: " +getPreco()+ " há " +getQuantidade()+ " no estoque ");
         }
     }

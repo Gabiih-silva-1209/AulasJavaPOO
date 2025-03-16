@@ -1,9 +1,9 @@
-package exercício05Encapsulamento02;
+package com.senai.aula03_Encapsulamento.exercicios.conta_bancaria;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class RegistroConta {
+public class Main {
     public static void main(String[] args) {
         ArrayList<ContaBancaria> contas = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);

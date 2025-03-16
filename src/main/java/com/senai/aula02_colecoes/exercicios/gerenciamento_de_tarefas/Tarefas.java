@@ -10,14 +10,17 @@ public class Tarefas {
         }
 
         public String getNome() {
+
             return nome;
         }
 
         public boolean isConcluida() {
+
             return concluida;
         }
 
         public void setConcluida(boolean concluida) {
+
             this.concluida = concluida;
         }
     }

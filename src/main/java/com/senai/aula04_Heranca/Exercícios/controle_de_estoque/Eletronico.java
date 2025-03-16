@@ -5,6 +5,7 @@ public class Eletronico extends Produto {
 
     public Eletronico(String name, double preco, int quantidade, int voltagem) {
         super(name, preco, quantidade);
+        setVoltagem(voltagem);
         this.voltagem = voltagem;
     }
 
@@ -13,12 +14,18 @@ public class Eletronico extends Produto {
     }
 
     public void setVoltagem(int voltagem) {
-        this.voltagem = voltagem;
+        if (voltagem == 110 || voltagem == 220) {
+            this.voltagem = voltagem;
+        }else{
+            System.out.println("Voltagem inválida. A voltagem devem ser 110 ou 220.  ");
+       this.voltagem = 0;
+        }
     }
 
     @Override
     void exibirDetalhes() {
         super.exibirDetalhes();
+        System.out.println(" , Voltagem: " +(voltagem ==0? " Inválida" :voltagem + "V") );
     }
 }
 

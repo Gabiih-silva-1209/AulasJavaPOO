@@ -1,4 +1,4 @@
-package com.senai.aula02_colecoes.exemplos;
+package com.senai.aula02_colecoes.exemplos.Pessoa;
 
 import java.util.ArrayList;
 import java.util.List;
