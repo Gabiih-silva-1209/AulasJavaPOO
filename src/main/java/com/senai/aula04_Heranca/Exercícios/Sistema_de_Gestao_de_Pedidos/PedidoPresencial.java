@@ -9,6 +9,7 @@ public class PedidoPresencial extends Pedido {
     }
 
     public double getDesconto() {
+
         return desconto;
     }
 

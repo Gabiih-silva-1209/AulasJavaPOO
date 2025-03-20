@@ -5,14 +5,21 @@ public class PacienteParticular extends Paciente {
 
     public PacienteParticular(String nome, int idade, double custoConsulta) {
         super(nome, idade);
-        this.custoConsulta = custoConsulta;
+            if (custoConsulta >= 0) {
+                this.custoConsulta = custoConsulta;
+            } else {
+                System.out.println("O custo da consulta não pode ser negativo!");
+                this.custoConsulta = 0;
+        }
     }
 
     public double getCustoConsulta() {
+
         return custoConsulta;
     }
 
     public void setCustoConsulta(double custoConsulta) {
+
         this.custoConsulta = custoConsulta;
     }
 

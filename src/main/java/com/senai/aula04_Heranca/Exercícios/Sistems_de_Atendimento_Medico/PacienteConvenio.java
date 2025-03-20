@@ -5,10 +5,16 @@ public class PacienteConvenio extends Paciente{
 
     public PacienteConvenio(String nome, int idade, double desconto) {
         super(nome, idade);
-        this.desconto = desconto;
+        if (desconto >=0){
+            this.desconto = desconto;
+        }else{
+            System.out.println("O desconto não pode ser negativo!");
+            this.desconto = 0;
+        }
     }
 
     public double getDesconto() {
+
         return desconto;
     }
 

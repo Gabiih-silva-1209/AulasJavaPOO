@@ -1,24 +1,36 @@
 package com.senai.aula04_Heranca.Exercícios.Sistema_de_bibliotecas;
 
 public class LivroDigital extends Livro {
-    protected int numeroPaginas;
+    protected double tamanhoArquivoMB;
 
-    public LivroDigital(String titulo, String autor, int numeroPaginas) {
+    public LivroDigital(String titulo, String autor, double tamanhoArquivoMB) {
         super(titulo, autor);
-        this.numeroPaginas = numeroPaginas;
+        if (tamanhoArquivoMB >= 0) {
+            this.tamanhoArquivoMB = tamanhoArquivoMB;
+        }else{
+            System.out.println("O tamabnho do arquivo MB não pode ser negativo!");
+            this.tamanhoArquivoMB = 0;
+        }
     }
 
-    public int getNumeroPaginas() {
-        return numeroPaginas;
+    public double getTamanhoArquivoMB() {
+        return tamanhoArquivoMB;
     }
 
-    public void setNumeroPaginas(int numeroPaginas) {
-        this.numeroPaginas = numeroPaginas;
+    public void setTamanhoArquivoMB(double tamanhoArquivoMB) {
+        this.tamanhoArquivoMB = tamanhoArquivoMB;
     }
 
     @Override
     void exibirDetalhes() {
         super.exibirDetalhes();
-        System.out.println(", o livro tem " +numeroPaginas+ "números de páginas");
+    }
+
+    @Override
+    public String toString() {
+        return "LivroDigital{" +
+                "tamanhoArquivoMB=" + tamanhoArquivoMB +
+                '}';
     }
 }
+
