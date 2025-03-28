@@ -8,6 +8,7 @@ public class Main {
         realizarManutencao(new Caminhao("Scania 1659"));
     }
     private static void realizarManutencao(Veiculo veiculo){
+
         veiculo.realizarManutencao();
     }
 }
