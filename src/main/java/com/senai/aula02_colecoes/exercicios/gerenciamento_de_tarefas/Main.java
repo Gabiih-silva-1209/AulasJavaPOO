@@ -3,7 +3,7 @@ package com.senai.aula02_colecoes.exercicios.gerenciamento_de_tarefas;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class GerenciadorDeTarefas {
+public class Main {
 
     public static void main(String[] args) {
         ArrayList<String> tarefas = new ArrayList<>();

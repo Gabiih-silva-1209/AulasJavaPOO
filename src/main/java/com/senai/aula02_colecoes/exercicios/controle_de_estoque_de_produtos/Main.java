@@ -3,7 +3,7 @@ package com.senai.aula02_colecoes.exercicios.controle_de_estoque_de_produtos;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class ControleDeEestoque {
+public class Main {
     public static void main(String[] args) {
         ArrayList<String> produtos = new ArrayList<>();
         ArrayList<Integer> quantidades = new ArrayList<>();
