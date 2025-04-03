@@ -1,9 +1,9 @@
-package com.senai.aula06_Abstracao.Exemplos.Veículo;
+package com.senai.aula06_Abstracao.Exemplos.Veiculo;
 
 public abstract class Veiculo {
     private int velocidade;
 
-    public Veiculo(int velocidade) {
+    public Veiculo() {
         this.velocidade = 0;
     }
     public void acelerar(int incremento){

@@ -9,5 +9,7 @@ public class Main {
     private static void testarAnimal(Animal animal) {
         animal.dormir();
         animal.fazerSom();
+        Pato pato = (Pato) animal;
+        pato.botarOvo();
     }
 }
