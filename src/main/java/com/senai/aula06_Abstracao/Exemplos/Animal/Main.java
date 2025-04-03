@@ -9,6 +9,9 @@ public class Main {
     private static void testarAnimal(Animal animal) {
         animal.dormir();
         animal.fazerSom();
+        if (animal instanceof Pato pato){
+            pato.botarOvo();
+        }
         Pato pato = (Pato) animal;
         pato.botarOvo();
     }
