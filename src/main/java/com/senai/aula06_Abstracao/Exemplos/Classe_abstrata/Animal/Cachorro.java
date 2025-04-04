@@ -1,4 +1,4 @@
-package com.senai.aula06_Abstracao.Exemplos.Animal;
+package com.senai.aula06_Abstracao.Exemplos.Classe_abstrata.Animal;
 
 public class Cachorro extends Animal {
     public Cachorro(String nome) {

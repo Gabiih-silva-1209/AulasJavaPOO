@@ -1,4 +1,4 @@
-package com.senai.aula06_Abstracao.Exemplos.Veiculo;
+package com.senai.aula06_Abstracao.Exemplos.Classe_abstrata.Veiculo;
 
 public class Moto extends Veiculo {
     @Override
