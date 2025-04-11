@@ -1,4 +1,4 @@
-package com.senai.aula06_Abstracao.Exemplos_Interface.aparelho_eletronico;
+package com.senai.aula06_Abstracao.Exemplos_Interface.Aparelho_eletronico_slide;
 
 public class Computador implements AparelhoEletronico{
     @Override
