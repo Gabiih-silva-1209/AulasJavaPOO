@@ -3,9 +3,15 @@ package com.senai.aula06_Abstracao.Exercicios.Controle_de_entrega;
 public class MotoEntrega extends Veiculo {
     protected int velocidadeMaximaPermitida;
 
+
     public MotoEntrega(int velocidadeAtual, int capacidadeMaximaDeCarga, int velocidadeMaximaPermitida) {
         super(velocidadeAtual, capacidadeMaximaDeCarga);
         this.velocidadeMaximaPermitida = velocidadeMaximaPermitida;
+    }
+
+    @Override
+    public void mostrarDetalhes() {
+
     }
 
     @Override

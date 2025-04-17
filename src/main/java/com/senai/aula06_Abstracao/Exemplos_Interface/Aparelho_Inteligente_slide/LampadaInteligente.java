@@ -1,4 +1,4 @@
-package com.senai.aula06_Abstracao.Exemplos_Interface.Aparelho_Inteligente;
+package com.senai.aula06_Abstracao.Exemplos_Interface.Aparelho_Inteligente_slide;
 
 public class LampadaInteligente implements AparelhoInteligente{
     private int brilho;

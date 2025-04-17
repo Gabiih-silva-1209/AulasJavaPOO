@@ -1,4 +1,4 @@
-package com.senai.aula06_Abstracao.Exemplos_Interface.Aparelho_eletronico_slide;
+package com.senai.aula06_Abstracao.Exemplos_Interface.Aparelho_eletronico;
 
 public class Main {
     public static void main(String[] args) {

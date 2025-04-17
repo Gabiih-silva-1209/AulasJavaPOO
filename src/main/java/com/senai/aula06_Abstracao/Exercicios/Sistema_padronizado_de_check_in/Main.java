@@ -1,16 +1,31 @@
 package com.senai.aula06_Abstracao.Exercicios.Sistema_padronizado_de_check_in;
 
-import com.senai.aula06_Abstracao.Exemplos_Interface.Aparelho_Inteligente.AparelhoInteligente;
-import com.senai.aula06_Abstracao.Exemplos_Interface.Aparelho_Inteligente.LampadaInteligente;
-import com.senai.aula06_Abstracao.Exemplos_Interface.Aparelho_Inteligente.TVSmart;
 
 public class Main {
     public static void main(String[] args) {
-CheckIn.MensagemBemVindo(new Gol());
-        CheckIn.MensagemBemVindo(new Latam());
+CheckIn.MensagemBemVindo(new Gol("Nathalia",1));
+        CheckIn.MensagemBemVindo(new Latam("Ysabelly",65,));
 
-        System.out.println("------ Testando o check-In da companhia Gol");
-        CheckIn.MensagemBemVindo();
+    }
+    public static void testarAparelhos(AparelhosInteligentes aparelhosInteligentes){
+        System.out.printf("------ teste %s-----\n", aparelhosInteligentes.getClass().getSimpleName());
+        aparelhosInteligentes.ligar();
+        if(aparelhosInteligentes instanceof LampadaInteligente lampadaInteligente){
+            lampadaInteligente.aumentarBrilho();
+            lampadaInteligente.aumentarBrilho();
+            lampadaInteligente.baixarBrilho();
+            lampadaInteligente.baixarBrilho();
+            lampadaInteligente.baixarBrilho();
+        } else if (aparelhosInteligentes instanceof  TVSmart tvsmart) {
+            tvsmart.aumentarVolume();
+            tvsmart.aumentarVolume();
+            tvsmart.baixarVolume();
+            tvsmart.baixarVolume();
+            tvsmart.baixarVolume();
+        }
+        aparelhosInteligentes.desligar();
+    }
+}
 
     }
 }
