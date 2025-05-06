@@ -12,5 +12,4 @@ private List<Operador> carregar(){
     try(FileReader reader = new FileReader(FILE_PATH)){
         Type listType = new TypeToken<ArrayList<Operador>>()
     }
-    }
 }
