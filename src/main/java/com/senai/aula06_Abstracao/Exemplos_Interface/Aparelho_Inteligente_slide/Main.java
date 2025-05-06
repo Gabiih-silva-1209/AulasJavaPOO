@@ -6,9 +6,9 @@ public class Main {
         testarAparelhoInteligente(new TVSmart(2));
     }
 
-    public static void testarAparelhoInteligente(AparelhoInteligente aparelhoInteligente) {
+    public static void testarAparelhoInteligente(AparelhosInteligente aparelhosInteligente) {
         System.out.println("---- Testando aparelhos --------");
-        aparelhoInteligente.ligar();
-        aparelhoInteligente.desligar();
+        aparelhosInteligente.ligar();
+        aparelhosInteligente.desligar();
     }
 }

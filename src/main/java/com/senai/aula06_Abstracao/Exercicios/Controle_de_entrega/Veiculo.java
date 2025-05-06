@@ -1,29 +1,27 @@
 package com.senai.aula06_Abstracao.Exercicios.Controle_de_entrega;
 
 public abstract class Veiculo {
-    protected int VelocidadeAtual;
-    protected int CapacidadeMaximaDeCarga;
-    protected int distanciaPercorrida;
+    protected double velocidadeAtual; // km/h
+    protected double capacidadeMaxCarga; // kg
+    protected double distanciaDestino; // km
 
-    public Veiculo(int velocidadeAtual, int capacidadeMaximaDeCarga, int distanciaPercorrida) {
-        VelocidadeAtual = 0;
-        CapacidadeMaximaDeCarga = capacidadeMaximaDeCarga;
-        this.distanciaPercorrida = distanciaPercorrida;
+    public Veiculo(double capacidadeMaxCarga, double distanciaDestino) {
+        this.velocidadeAtual = 0;
+        this.capacidadeMaxCarga = capacidadeMaxCarga;
+        this.distanciaDestino = distanciaDestino;
     }
 
-    public void verificarVelocidadeAtual() {
-        System.out.println("A velocidade atual é: " + VelocidadeAtual + "Km/h");
+    public void aumentarVelocidade(double incremento) {
+        this.velocidadeAtual += incremento;
+        System.out.printf("Velocidade aumentada para %.1f km/h\n", velocidadeAtual);
     }
 
-    public void calcularADistancia(int km) {
-        distanciaPercorrida +=km;
-        int distancia = VelocidadeAtual * km;
-        System.out.println("A distância percorrida foi de: " + distancia + "Km");
+    public void exibirDetalhes() {
+        System.out.printf("Velocidade atual: %.1f km/h\n", velocidadeAtual);
+        System.out.printf("Capacidade máxima de carga: %.1f kg\n", capacidadeMaxCarga);
+        System.out.printf("Distância até o destino: %.1f km\n", distanciaDestino);
     }
-public abstract  void mostrarDetalhes();
 
-    public abstract void acelerar(int aumentar);
-
-    public abstract void reduzirVelocidade(int diminuir);
+    public abstract double calcularTempoEntrega();
 }
 

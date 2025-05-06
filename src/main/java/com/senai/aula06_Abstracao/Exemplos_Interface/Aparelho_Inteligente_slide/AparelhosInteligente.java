@@ -1,6 +1,6 @@
 package com.senai.aula06_Abstracao.Exemplos_Interface.Aparelho_Inteligente_slide;
 
-public interface AparelhoInteligente {
+public interface AparelhosInteligente {
     int Nivel_Maximo = 100;
 
     void ligar();

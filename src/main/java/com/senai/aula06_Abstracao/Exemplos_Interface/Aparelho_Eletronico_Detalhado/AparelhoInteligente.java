@@ -1,5 +1,5 @@
 package com.senai.aula06_Abstracao.Exemplos_Interface.Aparelho_Eletronico_Detalhado;
-public interface AparelhosInteligentes {
+public interface AparelhoInteligente {
     int NIVEL_MAXIMO = 100;
 
     void ligar();

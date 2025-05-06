@@ -1,6 +1,6 @@
 package com.senai.aula06_Abstracao.Exemplos_Interface.Aparelho_Inteligente_slide;
 
-public class TVSmart implements AparelhoInteligente{
+public class TVSmart implements AparelhosInteligente {
     private int volume;
 
     public TVSmart(int volume) {

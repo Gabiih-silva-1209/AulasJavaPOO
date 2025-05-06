@@ -1,43 +1,13 @@
 package com.senai.aula06_Abstracao.Exercicios.Sistema_padronizado_de_check_in;
 
 public class Gol implements CheckIn {
-    protected String NomePassageiro;
-    protected String NumeroVoo;
-    protected int bagagens;
-
-    public Gol(int bagagens) {
-        this.bagagens = 0;
-    }
-
-    public Gol(String nomePassageiro, String numeroVoo) {
-        NomePassageiro = nomePassageiro;
-        NumeroVoo = numeroVoo;
-
+    @Override
+    public void validarDocumento(String cpf, String rg) {
+        System.out.println("[GOL] CPF: " + cpf + " e RG: " + rg + " validados com sucesso.");
     }
 
     @Override
-    public void IniciarCheckIn(String nomePassageiro, String numeroVoo) {
-        System.out.println("O check-In foi iniciado com sucesso!");
-        System.out.println("O check-In iniciado para o passageiro: " + nomePassageiro+" no voo: " + numeroVoo);
-    }
-
-    @Override
-    public void VerificarDocumentos(String Documentos) {
-        System.out.println("Verificando documentos do passageiro: " + Documentos + " na Gol.");
-
-    }
-
-    @Override
-    public void finalizarCheckIn() {
-        System.out.println("Check-In finalizado para o passageiro: " + NomePassageiro + " no voo Gol: " + NumeroVoo);
-    }
-
-    public void adicionarBagagem() {
-        System.out.println("Bagagens: " + (bagagens = ajustarBagagem(bagagens, 1)));
-    }
-
-    public void removerBagagem() {
-        System.out.println("Bagagens: " + (bagagens = ajustarBagagem(bagagens, -1)));
+    public void emitirCartaoDeEmbarque() {
+        System.out.println("[GOL] Cartão de embarque emitido com sucesso.");
     }
 }
-

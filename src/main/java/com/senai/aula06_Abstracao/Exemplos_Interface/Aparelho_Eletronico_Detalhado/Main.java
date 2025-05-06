@@ -5,7 +5,7 @@ public class Main {
         testarAparelhos(new TVSmart());
         testarAparelhos(new LampadaInteligente());
     }
-    public static void testarAparelhos(AparelhosInteligentes aparelhosInteligentes){
+    public static void testarAparelhos(AparelhoInteligente aparelhosInteligentes){
         System.out.printf("------ teste %s-----\n", aparelhosInteligentes.getClass().getSimpleName());
         aparelhosInteligentes.ligar();
         if(aparelhosInteligentes instanceof LampadaInteligente lampadaInteligente){
