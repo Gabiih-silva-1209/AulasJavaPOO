@@ -8,8 +8,9 @@ public class OperadorDAO{
 private final String FILE_PATH = "operadores.json";
 private final Gson gson= new GsonBuilder().setPrettyPrinting().create();
 
-private List<Operador> carregar(){
-    try(FileReader reader = new FileReader(FILE_PATH)){
+private List<Operador> carregar() {
+    try (FileReader reader = new FileReader(FILE_PATH)) {
         Type listType = new TypeToken<ArrayList<Operador>>()
     }
+}
 }
