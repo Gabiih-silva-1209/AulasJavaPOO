@@ -1,23 +1,16 @@
 package com.senai.aula07_mvc.crud_usuario.Model;
 
-public class OperadorDAO extends Usuario{
-private String setor;
+import java.io.FileReader;
+import java.lang.reflect.Type;
+import java.util.ArrayList;
 
-    public OperadorDAO(String nome, int id, String setor) {
-        super(nome, id);
-        this.setor = setor;
+public class OperadorDAO{
+private final String FILE_PATH = "operadores.json";
+private final Gson gson= new GsonBuilder().setPrettyPrinting().create();
+
+private List<Operador> carregar(){
+    try(FileReader reader = new FileReader(FILE_PATH)){
+        Type listType = new TypeToken<ArrayList<Operador>>()
     }
-
-    public String getSetor() {
-        return setor;
-    }
-
-    public void setSetor(String setor) {
-        this.setor = setor;
-    }
-
-    @Override
-    public String toString() {
-        return String.format("ID: %d, Nome: %s, Setor: %s",super.getId(),super.getNome(),setor);
     }
 }
