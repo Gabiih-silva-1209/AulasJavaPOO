@@ -6,7 +6,6 @@ import com.senai.aula07_mvc.crud_usuario.Model.Operador;
 import com.senai.aula07_mvc.crud_usuario.Model.Supervisor;
 
 import java.util.Scanner;
-import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
@@ -30,6 +29,7 @@ public class Main {
             System.out.println(menu);
             opcao = scanner.nextInt();
             scanner.nextLine();
+
             System.out.println("Qual é o tipo de usuário??");
             System.out.println("1 - Operador");
             System.out.println("2- Supervisor");
@@ -84,7 +84,7 @@ public class Main {
                         case 3:
                             if (escolherTipo == 1)
                                 opController.listarOperadores().forEach(System.out::println);
-                            else if (escolherTipo == 2) {
+                     else if (escolherTipo == 2) {
                                 supController.listarSupervisores().forEach(System.out::println);
 
                                 System.out.println("Escolha um usuário para atualizar");
