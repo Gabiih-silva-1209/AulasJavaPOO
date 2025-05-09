@@ -5,6 +5,7 @@ import com.senai.aula07_mvc.crud_usuario.Controller.SupervisorController;
 import com.senai.aula07_mvc.crud_usuario.Model.Operador;
 import com.senai.aula07_mvc.crud_usuario.Model.Supervisor;
 
+import java.awt.geom.Area;
 import java.util.Scanner;
 
 public class Main {
@@ -58,7 +59,7 @@ public class Main {
                         System.out.println("Área: ");
                         String area = scanner.nextLine();
                         Supervisor supervisor = new Supervisor(Nome, id, area);
-                        if (opController.cadastrarSupervisor(supervisor)) {
+                        if (supController.cadastrarSupervisor(supervisor)) {
                             System.out.print("Cadastrado com sucesso!!");
                         } else {
                             System.out.println("Não foi possível cadastrar!!");
@@ -77,57 +78,56 @@ public class Main {
 
                     if (escolherTipo == 1)
                         opController.deletarOperador(id);
-                    else if (escolherTipo == 2) {
+                    else if (escolherTipo == 2)
                         supController.deletarSupervisor(id);
                         break;
+                case 3:
+                    if (escolherTipo == 1)
+                        opController.listarOperadores().forEach(System.out::println);
+                    else if (escolherTipo == 2)
+                        supController.listarSupervisores().forEach(System.out::println);
 
-                        case 3:
-                            if (escolherTipo == 1)
-                                opController.listarOperadores().forEach(System.out::println);
-                     else if (escolherTipo == 2) {
-                                supController.listarSupervisores().forEach(System.out::println);
+                        System.out.println("Escolha um usuário para atualizar");
+                        id = scanner.nextInt();
+                        scanner.nextLine();
+                        System.out.println("Atualize as seguintes informações: ");
+                        System.out.println("Nome: ");
+                        Nome = scanner.nextLine();
 
-                                System.out.println("Escolha um usuário para atualizar");
-                                id = scanner.nextInt();
-                                scanner.nextLine();
-                                System.out.println("Atualize as seguintes informações: ");
-                                System.out.println("Nome: ");
-                                Nome = scanner.nextLine();
+                    if (escolherTipo == 1) {
+                        System.out.println("Setor: ");
+                        String setor = scanner.nextLine();
+                        Operador operador = new Operador(Nome, id, setor);
+                        opController.atualizarOperador(operador);
+                    } else if (escolherTipo == 2) {
+                        System.out.println("Area: ");
+                        String area = scanner.nextLine();
+                        Supervisor supervisor = new Supervisor(Nome, id, area);
+                        supController.atualizarSupervisor(supervisor);
+                    }
+                    System.out.println("Usuário atualizado com sucesso!!");
+                    break;
 
-                                if (escolherTipo == 1) {
-                                    System.out.println("Setor: ");
-                                    String Setor = new Operador(Nome, id, Setor);
-                                    opController.atualizrOperador(Operador);
-                                } else if (escolherTipo == 2) {
-                                    System.out.println("Area: ");
-                                    String area = scanner.nextLine();
-                                    Supervisor supervisor = new Supervisor(Nome, id, area);
-                                    supController.atualizarSupervisor(Supervisor);
-                                }
-                                System.out.println("Usuário atualizado com sucesso!!");
-                                break;
+                case 4:
+                    if (escolherTipo == 1) {
+                    opController.listarOperadores().forEach(System.out::println);
+                    } else if (escolherTipo == 2) {
+                    supController.listarSupervisores().forEach(System.out::println);
+                    }
+                    break;
 
-                                case 4:
-                                    if (escolherTipo == 1) {
-                                        opController.listarOperadores().forEach(System.out::println);
-                                    } else if (escolherTipo == 2) {
-                                        supController.listarSupervisores().forEach(System.out::println);
-
-                                    }
-                                    break;
-                                case 5:
-                                    break;
-                                case 6:
-                                    break;
-                                case 7:
-                                    System.out.println("Saindo do sistema!!");
-                                default:
-                                    System.out.println("Opção inválida!");
-                                    break;
-                            }
-                    }while (opcao != 7) ;
-                    scanner.close();
+                case 5:
+                    break;
+                case 6:
+                    break;
+                case 7:
+                    System.out.println("Saindo do sistema!!");
+                    break;
+                default:
+                    System.out.println("Opção inválida!");
+                    break;
             }
-        }
+        }while (opcao != 7) ;
+        scanner.close();
     }
 }
